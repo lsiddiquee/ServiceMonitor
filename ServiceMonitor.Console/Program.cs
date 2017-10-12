@@ -56,6 +56,7 @@ namespace ServiceMonitor.Console
                 eventLogs[index] = new EventLog(eventLog);
                 eventLogs[index].EntryWritten += (sender, args) => { System.Console.WriteLine(args.Entry.Message); }; 
                 eventLogs[index].EnableRaisingEvents = true;
+                index++;
             }
         }
 
